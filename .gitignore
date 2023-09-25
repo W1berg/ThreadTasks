@@ -1,0 +1,11 @@
+__history
+__recovery
+Win32
+Win64
+*.~*
+*.bat
+*.dcu
+*.identcache
+*.local
+*.res
+*.vlb
