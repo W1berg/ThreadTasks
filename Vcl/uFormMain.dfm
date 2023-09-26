@@ -2,8 +2,8 @@ object FormMain: TFormMain
   Left = 0
   Top = 0
   Caption = 'FormMain'
-  ClientHeight = 1500
-  ClientWidth = 1200
+  ClientHeight = 1000
+  ClientWidth = 3000
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,17 +19,28 @@ object FormMain: TFormMain
   object pnlMain: TPanel
     Left = 0
     Top = 0
-    Width = 1200
-    Height = 1500
+    Width = 3000
+    Height = 1000
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitHeight = 800
+    object Splitter1: TSplitter
+      Left = 0
+      Top = 441
+      Width = 3000
+      Height = 3
+      Cursor = crVSplit
+      Align = alTop
+      ExplicitLeft = -48
+      ExplicitTop = 435
+    end
     object Memo1: TMemo
       Left = 0
       Top = 41
-      Width = 449
-      Height = 1459
-      Align = alLeft
+      Width = 3000
+      Height = 400
+      Align = alTop
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -15
@@ -41,7 +52,7 @@ object FormMain: TFormMain
     object pnlTop: TFlowPanel
       Left = 0
       Top = 0
-      Width = 1200
+      Width = 3000
       Height = 41
       Align = alTop
       BevelOuter = bvNone
@@ -49,33 +60,33 @@ object FormMain: TFormMain
       object btnStart: TButton
         Left = 0
         Top = 0
-        Width = 75
+        Width = 50
         Height = 28
-        Caption = 'btnStart'
+        Caption = 'Start'
         TabOrder = 0
         OnClick = btnStartClick
       end
       object btnStop: TButton
-        Left = 75
+        Left = 50
         Top = 0
-        Width = 75
+        Width = 50
         Height = 28
-        Caption = 'btnStop'
+        Caption = 'Stop'
         TabOrder = 1
         OnClick = btnStopClick
       end
-      object btnUpdate: TButton
-        Left = 150
+      object btnRefresh: TButton
+        Left = 100
         Top = 0
         Width = 50
         Height = 28
         Align = alLeft
-        Caption = 'Update'
+        Caption = 'Refresh'
         TabOrder = 2
-        OnClick = btnUpdateClick
+        OnClick = btnRefreshClick
       end
       object btnDelete: TButton
-        Left = 200
+        Left = 150
         Top = 0
         Width = 50
         Height = 28
@@ -85,17 +96,20 @@ object FormMain: TFormMain
         OnClick = btnDeleteClick
       end
     end
-    object pnlThreads: TScrollBox
-      Left = 449
-      Top = 41
-      Width = 751
-      Height = 1459
+    object pnlTasks: TFlowPanel
+      Left = 0
+      Top = 444
+      Width = 3000
+      Height = 556
       Align = alClient
       TabOrder = 2
+      ExplicitTop = 657
+      ExplicitHeight = 343
     end
   end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
+  object tiRefresh: TTimer
+    Interval = 0
+    OnTimer = tiRefreshTimer
     Left = 568
     Top = 488
   end

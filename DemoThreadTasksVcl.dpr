@@ -2,9 +2,9 @@ program DemoThreadTasksVcl;
 
 uses
   Vcl.Forms,
+  uDemos in 'uDemos.pas',
   uFormMain in 'Vcl\uFormMain.pas',
   uFrmThread in 'Vcl\uFrmThread.pas',
-  uStart in 'uStart.pas',
   uAes in '..\WibLib\uAes.pas',
   uArgon2 in '..\WibLib\uArgon2.pas',
   uArgon2Aes in '..\WibLib\uArgon2Aes.pas',
